@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>국립현대미술관</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      #wrap {
+        width: 1903px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #wrap header {
+        height: 100px;
+      }
+
+      #wrap header .top {
+        width: 1480px;
+        margin: 0 auto;
+      }
+      #wrap .logo a img {
+        float: left;
+        width: 210px;
+        height: 70px;
+        position: relative;
+        margin-left: 100px;
+        padding: 30px;
+      }
+      .util li {
+        float: right;
+        position: relative;
+        background: #fff;
+        z-index: 10;
+        margin: 30px 0 0 0;
+        padding: 8px;
+        margin-top: -4px;
+      }
+
+      .util li:last-child {
+        margin-top: -4px;
+      }
+      .util li:last-child a {
+        border: 1px solid #bbb;
+        border-radius: 42px;
+        font-size: 12px;
+        color: #bbb;
+        padding: 5px 15px;
+      }
+      #wrap .menu {
+        float: right;
+        align-items: center;
+      }
+      #wrap .menu > ul {
+        height: 100px;
+      }
+      #wrap .menu > ul > li {
+        float: left;
+        position: relative;
+        width: 142px;
+        font-size: 19px;
+        font-weight: bold;
+      }
+      #wrap .menu > ul > li > a {
+        display: block;
+        line-height: 100px;
+        text-align: center;
+        position: relative;
+      }
+      #wrap .menu > ul > li > a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #ff7300;
+        transform: scaleX(0);
+        transition: 0.5s;
+      }
+      #wrap .menu > ul > li:hover > a::after {
+        transform: scaleX(1);
+      }
+      #wrap .menu > ul .sub {
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+        position: absolute;
+        left: 0;
+        top: 100px;
+        width: 100%;
+        z-index: 1;
+        font-weight: normal;
+        font-size: 16px;
+        /* 메뉴 펼쳤을 때 글씨 기본. */
+      }
+
+      #wrap .menu > ul:hover .sub {
+        height: 320px;
+        padding: 20px 0;
+      }
+      #wrap .menu > ul .sub.on {
+        height: 320px;
+        padding: 20px 0;
+      }
+      #wrap .menu > ul .sub li {
+        line-height: 40px;
+        text-align: center;
+      }
+      #wrap .menu > ul > li:hover > a {
+      }
+      #wrap .menu > ul .sub li:hover a {
+        color: #094ef0;
+        display: block;
+      }
+      .bg {
+        position: absolute;
+        left: 0;
+        top: 100px;
+        background-color: #fff;
+        width: 100%;
+        height: 0;
+        transition: 0.4s;
+        border-top: 1px solid transparent;
+      }
+      /* #wrap .menu > ul:hover ~ .bg{height: 320px;border-color: #ccc;background-color: #fff;} */
+
+      .main {
+        padding: 50px 0;
+        text-align: center;
+      }
+      .main .content {
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="top">
+          <h1 class="logo">
+            <a href="#"
+              ><img src="./images/bg_logo_full.svg" alt="국현미로고"
+            /></a>
+          </h1>
+          <ul class="util">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">KOR</a></li>
+          </ul>
+          <div class="menu">
+            <ul>
+              <li>
+                <a href="#">관람참여</a>
+                <ul class="sub">
+                  <li><a href="#">서울</a></li>
+                  <li><a href="#">과천</a></li>
+                  <li><a href="#">덕수궁</a></li>
+                  <li><a href="#">청주</a></li>
+                  <li><a href="#">어린이미술관</a></li>
+                  <li><a href="#">이벤트</a></li>
+                  <li><a href="#">통합예약</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">전시</a>
+                <ul class="sub">
+                  <li><a href="#">현재전시</a></li>
+                  <li><a href="#">예정전시</a></li>
+                  <li><a href="#">과거전시</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">교육</a>
+                <ul class="sub">
+                  <li><a href="#">미술관교육소개</a></li>
+                  <li><a href="#">어린이</a></li>
+                  <li><a href="#">청소년</a></li>
+                  <li><a href="#">교사</a></li>
+                  <li><a href="#">성인</a></li>
+                  <li><a href="#">교육자료실</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">소장품</a>
+                <ul class="sub">
+                  <li><a href="#">소장품검색</a></li>
+                  <li><a href="#">소장품탐색</a></li>
+                  <li><a href="#">소장품대여</a></li>
+                  <li><a href="#">보존과학</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">미술연구</a>
+                <ul class="sub">
+                  <li><a href="#">도서와 아카이브</a></li>
+                  <li><a href="#">연구</a></li>
+                  <li><a href="#">언론보도</a></li>
+                  <li><a href="#">발간자료</a></li>
+                  <li><a href="#">MMCA 리서치랩</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">디지털미술관</a>
+                <ul class="sub">
+                  <li><a href="#">메인</a></li>
+                  <li><a href="#">맞춤검색</a></li>
+                  <li><a href="#">오디오가이드</a></li>
+                  <li><a href="#">이용자갤러리</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="main">
+      <ul class="content">
+        <li>
+          <div class="inner">
+            <p>
+              <img src="./images/main01.png" alt="메인01" />
+            </p>
+            <div class="txt">
+              <h1>1969</h1>
+              <p>
+                1969년에 개관하여 우리나라의 근·현대미술과 외국의 현대미술을
+                대표하는 우수한 미술작품들을 소장·전시하고 있는 국내 유일의
+                국립미술관 입니다.
+              </p>
+              <h1>NOW</h1>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="wrap">
+      <div class="left">
+        <p><img src="./images/images01.jpg" alt="main" /></p>
+        <p></p>
+      </div>
+      <div class="right">
+        <ul>
+          <li>
+            <ul>
+              <li>
+                <!-- 하나의 부모 안에 1번과 3번 -->
+                <p><img src="./images/images02.png" alt="m01" /></p>
+                <div class="desc">
+                  <p>[서울] 정영선:이 땅에 숨 쉬는 모든 것들을 위하여</p>
+                  <p>이어지는 삶 속에서 새로 발견한 것</p>
+                  <p>"나만의 목표를 갖고 작은 시도를 해보는 게 중요해요"</p>
+                  <p><strong>박찬종</strong> 크리에이터, 패러사이클링 선수</p>
+                </div>
+              </li>
+              <li>
+                <p><img src="./images/images03.png" alt="main_b03" /></p>
+                <div class="desc">
+                  <p>PEOPLE</p>
+                  <p>이어지는 삶 속에서 새로 발견한 것</p>
+                  <p>"나만의 목표를 갖고 작은 시도를 해보는 게 중요해요"</p>
+                  <p><strong>박찬종</strong> 크리에이터, 패러사이클링 선수</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>
+                <!-- 하나의 부모 안에 2번과 4번 -->
+                <p><img src="./images/images04.png" alt="m02" /></p>
+                <div class="desc">
+                  <p>PEOPLE</p>
+                  <p>이어지는 삶 속에서 새로 발견한 것</p>
+                  <p>"나만의 목표를 갖고 작은 시도를 해보는 게 중요해요"</p>
+                  <p><strong>박찬종</strong> 크리에이터, 패러사이클링 선수</p>
+                </div>
+              </li>
+              <li>
+                <p><img src="./images/images05.png" alt="main_b04" /></p>
+                <div class="desc">
+                  <p>PEOPLE</p>
+                  <p>이어지는 삶 속에서 새로 발견한 것</p>
+                  <p>"나만의 목표를 갖고 작은 시도를 해보는 게 중요해요"</p>
+                  <p><strong>박찬종</strong> 크리에이터, 패러사이클링 선수</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+[서울] 정영선:이 땅에 숨 쉬는 모든 것들을 위하여 관람기관 2024.2.5~2024.9.22
+관람시간 월,화,목,금,일 10:00~21:00 전시실 7전시실 관람료 2000원
